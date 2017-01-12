@@ -10,3 +10,22 @@ function printPositives(array){
         }
     });
 }
+
+//Get positive
+
+function getPositives(array){
+    var newArr = [];
+    
+    newArr = array.filter(function(item){
+        if (item > 0){
+            return item;
+        }
+    })
+    
+    return newArr;
+}
+
+var arrayProblem2 = [2, 3, -9, -8, 5, 7];
+
+
+//Filter it out
