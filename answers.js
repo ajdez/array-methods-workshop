@@ -62,3 +62,38 @@ longestWord(longStr);
 
 
 //i'd like to buy a vowel
+
+
+// Using forEach
+function countVowels(str){
+    var array = str.split("");
+    var count = 0;
+    array.forEach((a)=>{
+        if (a === "a" || a === "e" || a === "i" || a ==="o" || a === "u" || a === "y"){
+            count++;
+        }
+    })
+    return count;
+}
+
+var string = "Look at all the kitten";
+
+
+//Using filter();
+
+function countVowels(str){
+    var array = str.split("");
+    
+    var arrayTwo = array.filter((a)=>{
+        if (a === "a" || a === "e" || a === "i" || a ==="o" || a === "u" || a === "y"){
+            return a;
+        }
+    })
+    return arrayTwo.length;
+}
+
+var string = "Look at all the kitten";
+console.log(countVowels(string));
+
+
+
