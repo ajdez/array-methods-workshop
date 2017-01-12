@@ -96,4 +96,48 @@ var string = "Look at all the kitten";
 console.log(countVowels(string));
 
 
+//High? Low ?
 
+function highLow(array){
+    var object = {
+        highest: 0,
+        lowest: 0
+    };
+    object.highest = array.reduce((a, b) =>{
+        if (b < a){
+            return a;
+        }else{
+            return b;
+        }
+    }, -Infinity);
+    object.lowest = array.reduce((a, b) =>{
+        if (b > a){
+            return a;
+        }
+        else{
+            return b;
+        }
+    }, Infinity);
+    return object;
+}
+
+
+var array = [1, -10, 20, 40, 5];
+
+
+//Wheel of Fortune
+
+function countChars (str){
+    var object = {};
+    var strArray = str.split("");
+    
+    strArray.forEach(function(item){
+        if (item in object){ 
+            object[item] ++;
+        }
+        else{
+            object[item] = 1;
+        }//object exist)
+    })
+    return object;
+}
