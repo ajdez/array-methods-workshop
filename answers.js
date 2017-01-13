@@ -141,3 +141,27 @@ function countChars (str){
     })
     return object;
 }
+
+
+//Funcitonal Programming
+
+// function negate(func){
+//     return !(func);
+// }
+
+function negate(func){
+    return function(x){
+        return !(func(x));
+    }
+}
+
+function isEven(num) {
+  return num % 2 === 0;
+}
+
+var isOdd = negate(isEven);
+
+var array = [1, 2, 3];
+
+array.filter(isEven);
+array.filter(isOdd);
